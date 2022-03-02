@@ -23,6 +23,8 @@ int	ft_play(t_vars *vars)
 	vars->map.fd = open(vars->av[vars->level], O_RDONLY);
 	if (ft_init_map(&(vars->map)) == -1)
 	{
+		ft_delete_vars(vars);//Attention peut etre free des trucs pas alloues
+		return (0);
 	}
 	close(vars->map.fd);
 	ft_begin_game(vars);
@@ -64,7 +66,7 @@ int	main(int ac, char **av)
 
 	i = 0;
 	if (ac < 2)
-		return (printf("Mauvais nombre d'arguments\n"), -1);
+		return (printf("No arguments\n"), -1);
 	vars.av = av;
 	while (av[++i])
 		if (check_argument(av[i], &vars) == 0)

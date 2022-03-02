@@ -25,7 +25,7 @@ void	ft_mlx_close_escape(t_vars *vars)
 		ptr->end_loop = 1;
 	}
 	printf("Collectibles : %d / %d\n", vars->collected, vars->map.nb_collec);
-	printf("Moooooooves : %d\n", vars->nb_moves);
+	printf("Moves : %d\n", vars->nb_moves);
 }
 
 void	ft_mlx_close_croix_rouge_de_ses_morts(t_vars *vars)
@@ -41,5 +41,5 @@ void	ft_mlx_close_croix_rouge_de_ses_morts(t_vars *vars)
 		ptr->end_loop = 1;
 	}
 	printf("Collectibles : %d / %d\n", vars->collected, vars->map.nb_collec);
-	printf("Moooooooooves : %d\n", vars->nb_moves);
+	printf("Moves : %d\n", vars->nb_moves);
 }

@@ -100,6 +100,8 @@ void	ft_begin_game(t_vars *vars)
 	vars->win = mlx_new_window(vars->mlx, WLENGTH,
 			WHEIGHT, "Thanks for all the fish !");
 	vars->images = ft_init_images(vars);
+	if (vars->images == NULL)
+		return ;
 	ft_fill_coraux_bizarres(vars);
 	get_coords(vars, &(vars->x), &(vars->y));
 	ft_calcul_decalage(vars, &(vars->offset_x), &(vars->offset_y));

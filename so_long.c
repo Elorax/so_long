@@ -27,7 +27,7 @@ int	ft_play(t_vars *vars, char *av, int index)
 	close(vars->map.fd);
 	vars->map.fd = open(av, O_RDONLY);
 	if (ft_init_map(&(vars->map)) == -1)
-		return (-1);
+		return (-1);//Attention a tout free
 	printf("Argument %d : Map valide !\n", index);
 	close(vars->map.fd);
 	printf("Coucou\n");

@@ -51,6 +51,11 @@ void	ft_begin_game(t_vars *vars)
 	vars->win = mlx_new_window(vars->mlx, 50 * vars->map.length,
 			50 * vars->map.height, "Thanks for all the fish !");
 	vars->images = ft_init_images(vars);
+	if (vars->images == NULL)
+	{
+		//destroy;
+		return ;
+	}
 	ft_display_map(vars);
 	ft_setup_hooks(vars);
 	mlx_loop(vars->mlx);

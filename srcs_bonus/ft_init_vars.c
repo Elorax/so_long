@@ -6,7 +6,7 @@
 /*   By: abiersoh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 14:29:00 by abiersoh          #+#    #+#             */
-/*   Updated: 2021/12/30 19:06:29 by abiersoh         ###   ########.fr       */
+/*   Updated: 2022/03/06 15:54:47 by abiersoh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void	ft_init_vars(t_vars *vars)
 	vars->dir = up;
 	vars->pause = 0;
 	vars->begin = clock();
+	ft_init_file(vars);
 }
 
 int	ft_read_map(t_map *map)
